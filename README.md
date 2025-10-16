@@ -1,11 +1,49 @@
-<div align="center">
+# محسن الأوامر وملخص PDF الذكي (مع Capacitor)
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+هذا هو تطبيق ويب متقدم لتحسين أوامر الذكاء الاصطناعي وتلخيص ملفات PDF باستخدام نموذج Gemini، وهو مهيأ بالكامل ليتم تحويله إلى تطبيق موبايل أصلي لأنظمة iOS و Android باستخدام Capacitor.
 
-  <h1>Built with AI Studio</h2>
+## كيفية الإعداد والتشغيل
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+### 1. تثبيت الاعتماديات
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+لتثبيت جميع المكتبات المطلوبة (React, Capacitor, etc.)، قم بتشغيل الأمر التالي في الطرفية (terminal):
 
-</div>
+```bash
+npm install
+```
+
+### 2. إعداد متغيرات البيئة
+
+يتطلب هذا المشروع مفتاح API لـ Google Gemini. تأكد من إعداد متغير البيئة `API_KEY` في بيئة التشغيل الخاصة بك.
+
+### 3. بناء تطبيق الويب
+
+قبل أن تتمكن من تشغيل التطبيق على الموبايل، يجب عليك بناء نسخة الإنتاج من تطبيق الويب.
+
+**ملاحظة:** لم يتم تكوين أداة بناء (مثل Vite أو Create React App) في هذا المشروع بعد. ستحتاج إلى إعداد واحدة تضع الملفات المخرجة في مجلد `www`. بمجرد إعدادها، قم بتحديث الأمر `build` في `package.json`.
+
+```bash
+npm run build
+```
+
+### 4. مزامنة وبناء تطبيقات الموبايل
+
+بعد بناء تطبيق الويب بنجاح، استخدم الأوامر التالية لمزامنة التغييرات مع منصات الموبايل وفتحها في بيئات التطوير الخاصة بها.
+
+**للمزامنة (خطوة ضرورية بعد كل تغيير في كود الويب):**
+
+```bash
+npx capacitor sync
+```
+
+**لفتح المشروع في Android Studio:**
+
+```bash
+npx capacitor open android
+```
+
+**لفتح المشروع في Xcode (لمستخدمي macOS):**
+
+```bash
+npx capacitor open ios
+```

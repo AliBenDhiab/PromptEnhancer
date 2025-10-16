@@ -1,0 +1,25 @@
+{
+  "name": "gemini-prompt-pdf-app",
+  "private": true,
+  "version": "1.0.0",
+  "description": "تطبيق ويب متقدم لتحسين أوامر الذكاء الاصطناعي وتلخيص ملفات PDF باستخدام نموذج Gemini، مصمم ليكون قابلاً للتحويل إلى تطبيق موبايل عبر Capacitor.",
+  "scripts": {
+    "build": "echo 'Build step not configured. Please configure your build tool (e.g., Vite, Create React App) and update this script.'",
+    "cap:sync": "npm run build && npx capacitor sync",
+    "cap:android": "npx capacitor open android",
+    "cap:ios": "npx capacitor open ios"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "@google/genai": "^1.25.0",
+    "pdfjs-dist": "^5.4.296"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.1.1",
+    "@capacitor/core": "^6.1.1",
+    "@capacitor/android": "^6.1.1",
+    "@capacitor/ios": "^6.1.1",
+    "tailwindcss": "^3.4.4"
+  }
+}
